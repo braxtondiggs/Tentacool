@@ -1,0 +1,133 @@
+$purple1: #574A67;
+$purple2: #756B85;
+$purple3: #1A141F;
+$purple4: #3B3244;
+@mixin input-style {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 24px;
+    font-family: helvetica_neue_lt_pro45_light;
+}
+
+@font-face {
+    font-family: 'helvetica_neue_lt_pro45_light';
+    src: url('../fonts/helveticaneueltpro-lt-webfont.eot');
+    src: url('../fonts/helveticaneueltpro-lt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneueltpro-lt-webfont.woff') format('woff'), url('../fonts/helveticaneueltpro-lt-webfont.ttf') format('truetype'), url('../fonts/helveticaneueltpro-lt-webfont.svg#helvetica_neue_lt_pro45_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helvetica_neue_lt_pro47LtCn';
+    src: url('../fonts/helveticaneueltpro-ltcn-webfont.eot');
+    src: url('../fonts/helveticaneueltpro-ltcn-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneueltpro-ltcn-webfont.woff') format('woff'), url('../fonts/helveticaneueltpro-ltcn-webfont.ttf') format('truetype'), url('../fonts/helveticaneueltpro-ltcn-webfont.svg#helvetica_neue_lt_pro47LtCn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helvetica_neue_lt_27ultraLtCn';
+    src: url('../fonts/helveticaneueltpro-ultltcn-webfont.eot');
+    src: url('../fonts/helveticaneueltpro-ultltcn-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneueltpro-ultltcn-webfont.woff') format('woff'), url('../fonts/helveticaneueltpro-ultltcn-webfont.ttf') format('truetype'), url('../fonts/helveticaneueltpro-ultltcn-webfont.svg#helvetica_neue_lt_27ultraLtCn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: helvetica_neue_lt_pro45_light;
+    background-color: rgba($purple2, 0.4);
+}
+
+md-toolbar {
+    background-color: $purple1!important;
+}
+
+md-content {
+    background: transparent;
+    padding-top: 0;
+}
+
+.new-task {
+    background-color: $purple2;
+    padding: 15px 30px;
+    .addTask {
+        background-color: transparent;
+        border: none;
+        line-height: 30px;
+        outline: 0;
+        display: inline-block;
+        @include input-style;
+        &::-webkit-input-placeholder {
+            @include input-style;
+        }
+        &:-moz-placeholder {
+            @include input-style;
+        }
+        &::-moz-placeholder {
+            @include input-style;
+        }
+        &:-ms-input-placeholder {
+            @include input-style;
+        }
+    }
+    md-datepicker {
+        background: none;
+        float: right;
+        margin-top: -7px;
+        .md-datepicker-input-container {
+            display: none;
+        }
+    }
+}
+
+.material-icon span {
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+md-list {
+    padding-left: 30px;
+    border-bottom: 1px solid rgba($purple3, 0.3);
+    .completed {
+        margin: auto;
+        md-checkbox {
+            margin: auto;
+        }
+    }
+    .md-list-item-text {
+        padding-left: 20px;
+        outline: 0;
+        p {
+            margin: 0;
+            color: rgba(0, 0, 0, 0.6);
+            margin-top: 5px;
+        }
+        h3 {
+            margin: 0;
+            margin-top: 10px;
+            color: rgba(0, 0, 0, 0.6);
+            font-family: helvetica_neue_lt_pro47LtCn;
+            font-size: 30px;
+        }
+    }
+}
+.md-sidenav-right {
+    .md-datepicker-button {
+        margin: 0!Important;
+        height: auto;
+        width: auto;
+    }
+    .md-datepicker-input-container {
+
+    }
+    md-input-container .md-input{
+        color: rgba(0,0,0,0.87)!important;
+    }
+}
+.remove-task {
+    width: 100%;
+}
